@@ -11,7 +11,6 @@
     <meta name="author" content="VoltEdge Solutions" />
     <title>VoltEdge Solutions | Home</title>
 
-    <!-- External stylesheet - will be built in Part 2 -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -28,7 +27,7 @@
 
         <!-- Navigation menu linking all pages of the website -->
         <nav>
-            <ul>
+            <ul >
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -54,29 +53,31 @@
     <main>
 
         <!-- Hero section -->
-        <section>
-            <h2>Welcome to VoltEdge Solutions</h2>
-            <p>
-                VoltEdge Solutions is a Cape Town based company that offers a wide range of electrical,
-                solar, and aquatic pump services. Whether you need a basic electrical repair, a full
-                solar panel system installed, or your pool pump fixed, our certified team of technicians
-                is ready to help.
-            </p>
-            <p>
-                We have been serving homeowners and businesses across the Western Cape since 2015 and
-                have completed over 1200 jobs to date.
-            </p>
-
-            <!-- Call to action links -->
-            <p>
-                <a href="services.html">View Our Services</a> |
-                <a href="enquiry.html">Get a Free Quote</a>
-            </p>
+        <section class="hero">
+            <div  class="hero-content">
+                <h2>Welcome to VoltEdge Solutions</h2>
+                <p>
+                    VoltEdge Solutions is a Cape Town based company that offers a wide range of electrical,
+                    solar, and aquatic pump services. Whether you need a basic electrical repair, a full
+                    solar panel system installed, or your pool pump fixed, our certified team of technicians
+                    is ready to help.
+                </p>
+                <p>
+                    We have been serving homeowners and businesses across the Western Cape since 2015 and
+                    have completed over 1200 jobs to date.
+                </p>
+    
+                <!-- Call to action links -->
+                <p>
+                    <a href="services.html">View Our Services</a>
+                    <a href="enquiry.html">Get a Free Quote</a>
+                </p>
+            </div>
         </section>
 
         <!-- Company highlights -->
         <section>
-            <h2>Why Choose Us</h2>
+            <h2 style="text-align: left;">Why Choose Us</h2>
 
             <ul>
                 <li>Over 9 years of experience in the electrical trade</li>
@@ -89,7 +90,7 @@
 
         <!-- Services overview -->
         <section>
-            <h2>What We Offer</h2>
+            <h2 style="text-align: right;">What We Offer</h2>
 
             <article>
                 <h3>General Electrical</h3>
@@ -136,12 +137,22 @@
     <!-- =======================================
          FOOTER
     ============================== -->
-    <footer>
-        <p>VoltEdge Solutions | 14 Circuit Road, Observatory, Cape Town, 7925</p>
-        <p>Phone: +27 21 555 0182 | Email: info@voltedgesolutions.co.za</p>
-        <p>Monday to Friday: 07:00 - 17:00 | Saturday: 08:00 - 13:00</p>
+<footer>
+    <div class="footer-main">
+        <div class="footer-brand">
+            <strong>VoltEdge Solutions</strong>
+            <p>14 Circuit Road, Observatory, Cape Town, 7925</p>
+            <p>Monday to Friday: 07:00 - 17:00 | Saturday: 08:00 - 13:00</p>
+        </div>
+        <div class="footer-contact">
+            <p>Phone: +27 21 555 0182</p>
+            <p>Email: info@voltedgesolutions.co.za</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
         <p>&copy; 2026 VoltEdge Solutions. All rights reserved.</p>
-    </footer>
+    </div>
+</footer>
 </body>
 
 </html>

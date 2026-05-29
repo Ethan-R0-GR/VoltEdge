@@ -1,6 +1,693 @@
 /* ============================================================
    VoltEdge Solutions - Main Stylesheet
-   This file will be completed in Part 2 of the project.
-   It will contain all CSS styling, layout, typography,
-   colours, and responsive design for the website.
+   Module: WEDE5020 - Web Development (Introduction)
    ============================================================ */
+
+/* ============================================================
+   1. Removes default browser margins and padding to ensure
+   consistent styling across all browsers.
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   2. DEFAULT BODY STYLES
+   ============================================================ */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1a2e;
+  background-color: #f8f9fb;
+}
+
+/* ============================================================
+   3. Styles all heading levels using the primary navy blue colour.
+   ============================================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   4. Set readable font size, spacing, and colour for body text.
+   ============================================================ */
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #5a6478;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #1e3a5f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d4a800;
+}
+
+strong {
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+/* ============================================================
+   Shared styles for header, navigation, main content,
+   sections, cards, and footer across all pages.
+   ============================================================ */
+
+/* --- Header --- */
+
+header {
+  background-color: #1e3a5f;
+  padding: 0.85rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 3px solid #f5c518;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo scales by height so it never stretches */
+header img {
+  height: 52px;
+  width: auto;
+}
+
+/* Tagline sits softly next to the logo */
+header > p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.82rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+
+/* --- Navigation --- */
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  border-radius: 4px;
+  border-bottom: 2px solid transparent;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Hover pseudo-class adds a subtle background */
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Active page link gets the yellow underline */
+nav ul li a.active {
+  color: #f5c518;
+  border-bottom-color: #f5c518;
+}
+
+/* --- Main content wrapper --- */
+
+main {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* --- Sections --- */
+
+section {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #f5c518;
+  display: inline-block;
+}
+
+/* --- Lists --- */
+
+section ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+section ul li {
+  color: #5a6478;
+  line-height: 1.7;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+/* --- Article / service cards --- */
+
+article {
+  background-color: #ffffff;
+  border: 1px solid #e2e7ef;
+  border-left: 4px solid #f5c518;
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 10px 10px 5px rgb(206, 206, 206);
+}
+
+article h3 {
+  margin-bottom: 0.4rem;
+}
+
+article p {
+  margin: 0;
+}
+
+/* --- Footer --- */
+
+footer {
+  background-color: #1e3a5f;
+  border-top: 3px solid #f5c518;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Two column layout - brand on left, contact on right */
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1160px;
+  margin: 0 auto 1.25rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand strong {
+  color: #f5c518;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.88rem;
+  margin-bottom: 0.3rem;
+}
+
+.footer-contact p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.88rem;
+  margin-bottom: 0.3rem;
+  text-align: right;
+}
+
+/* Copyright bar at the bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1rem;
+  text-align: center;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* ============================================================
+   Index page - hero section with background image and overlay.
+   ============================================================ */
+
+.hero {
+  background-image: url("../Images/index_hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  border: 3px solid #1e3a5f !important;
+}
+
+.hero-content {
+  background-color: rgba(30, 58, 95, 0.78);
+  border-radius: 8px;
+  padding: 2.5rem;
+  max-width: 640px;
+  margin: 2rem;
+  font-weight: 600;
+}
+
+.hero-content h2 {
+  color: #ffffff;
+  border-bottom: 3px solid #f5c518;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1rem;
+}
+
+/* Call to action buttons inside the hero */
+.hero-content p:last-child a {
+  display: inline-block;
+  background-color: #f5c518;
+  color: #1e3a5f;
+  font-weight: 700;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.hero-content p:last-child a:hover {
+  background-color: #d4a800;
+}
+
+/* ============================================================
+   About Page - about.html
+   Team cards with portrait placeholder for each member.
+   ============================================================ */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.team-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e7ef;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 10px 10px 5px rgb(206, 206, 206);
+}
+
+.team-card .portrait {
+  background-color: #1e3a5f;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card .portrait img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.team-card .portrait-placeholder {
+  font-size: 4rem;
+  color: #f5c518;
+}
+
+.team-card .team-info {
+  padding: 1.2rem 1rem;
+}
+
+.team-card .team-info h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.team-card .team-info .role {
+  color: #f5c518;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.team-card .team-info p {
+  font-size: 0.88rem;
+  color: #5a6478;
+  margin: 0;
+}
+
+/* ============================================================
+   Enquiry Page - enquiry.html
+   Styles for the form, fieldsets, inputs, and submit button.
+   ============================================================ */
+
+fieldset {
+  border: 1px solid #e2e7ef;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 5px rgb(206, 206, 206);
+}
+
+legend {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1e3a5f;
+  padding: 0 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 1.5px solid #e2e7ef;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  background-color: #f8f9fb;
+  transition: border-color 0.2s ease;
+}
+
+/* Focus pseudo-class highlights the active input */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border-color: #1e3a5f;
+  outline: none;
+  background-color: #ffffff;
+}
+
+select {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 1.5px solid #e2e7ef;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  background-color: #f8f9fb;
+  transition: border-color 0.2s ease;
+}
+
+select:focus {
+  border-color: #1e3a5f;
+  outline: none;
+  background-color: #ffffff;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 1.5px solid #e2e7ef;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  background-color: #f8f9fb;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+textarea:focus {
+  border-color: #1e3a5f;
+  outline: none;
+  background-color: #ffffff;
+}
+
+input[type="submit"] {
+  background-color: #f5c518;
+  color: #1e3a5f;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #d4a800;
+}
+
+section ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section ol li {
+  color: #5a6478;
+  line-height: 1.7;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+/* ============================================================
+   Contact Page - contact.html
+   Styles for the location cards and embedded Google Maps.
+   ============================================================ */
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.locations-grid div {
+   box-shadow: 10px 10px 5px rgb(206, 206, 206);
+}
+
+.location-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e7ef;
+  border-top: 4px solid #f5c518;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.location-card iframe {
+  width: 100%;
+  height: 220px;
+  display: block;
+  border: none;
+}
+
+.location-card .location-info {
+  padding: 1.2rem 1.5rem;
+}
+
+.location-card .location-info h3 {
+  margin-bottom: 0.75rem;
+}
+
+.location-card .location-info p {
+  font-size: 0.9rem;
+  color: #5a6478;
+  margin-bottom: 0.3rem;
+}
+
+/* ============================================================
+   Responsive Design - Tablet (max-width: 768px)
+   ============================================================ */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  nav {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  nav ul {
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 0.1rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .hero {
+    min-height: 320px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-contact p {
+    text-align: left;
+  }
+}
+
+/* ============================================================
+   Responsive Design - Mobile (max-width: 480px)
+   ============================================================ */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  nav ul {
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 0.1rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero {
+    min-height: 260px;
+    border-radius: 4px;
+  }
+
+  .hero-content {
+    margin: 0.75rem;
+    padding: 1.2rem;
+    max-width: 100%;
+  }
+
+  .hero-content p:last-child a {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  article {
+    padding: 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  fieldset {
+    padding: 1rem;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+}
