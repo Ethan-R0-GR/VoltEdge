@@ -3,13 +3,13 @@
 ## Student Information
 - Module: Web Development (Introduction)
 - Module Code: WEDE5020
-- Part: Part 1 - Building the Foundation
+- Part: Part 2 - Designing the Visuals
 
 ---
 
 ## Project Overview
 
-VoltEdge Solutions is a fictional full-service electrical and maintenance company based in Cape Town, South Africa. This website was built as the Part 1 submission for the WEDE5020 Portfolio of Evidence. The site covers all five required pages with basic HTML structure and content. Styling will be added in Part 2 and JavaScript functionality will be added in Part 3.
+VoltEdge Solutions is a fictional full-service electrical and maintenance company based in Cape Town, South Africa. This website was built as part of the WEDE5020 Portfolio of Evidence. Part 1 covered the HTML structure and content across all five pages. Part 2 added all CSS styling, responsive design, and visual improvements. JavaScript functionality will be added in Part 3.
 
 ---
 
@@ -27,14 +27,14 @@ Key targets after launch include getting 500 unique visitors per month, receivin
 
 ## Key Features and Functionality
 
-- Navigation bar linking all five pages
-- Service overview on the homepage
-- Full company story and team section on the about page
-- Three service categories with detailed breakdowns on the services page
-- Enquiry form with dropdowns for service type, urgency, and preferred contact time
-- Contact page with two office locations and embedded Google Maps
-- General contact form on the contact page
-- HTML comments throughout all files explaining the code
+- Sticky navigation bar with hover and active pseudo-class states
+- Hero section with background image and semi-opaque overlay
+- Service cards with yellow left border and box shadow
+- Team cards with portrait area on the about page
+- Styled enquiry and contact forms with focus states on all inputs
+- Two location cards with embedded Google Maps on the contact page
+- Fully responsive layout for desktop, tablet, and mobile
+- External CSS stylesheet linked to all five pages
 
 ---
 
@@ -48,7 +48,7 @@ voltedge/
 ├── enquiry.html      - Get a Quote page
 ├── contact.html      - Contact Us page
 ├── css/
-│   └── style.css     - External stylesheet (to be completed in Part 2)
+│   └── style.css     - External stylesheet
 ├── js/
 │   └── main.js       - JavaScript file (to be completed in Part 3)
 ├── images/           - Folder for all image assets
@@ -63,7 +63,7 @@ voltedge/
 VoltEdge Solutions Website
 
 Home (index.html)
-- Introduction and welcome message
+- Hero section with background image and call to action buttons
 - Why choose us section
 - Services overview with six service summaries
 
@@ -71,7 +71,7 @@ About Us (about.html)
 - Company history and story
 - Mission and vision statements
 - Company values
-- Team member profiles
+- Team member cards with portrait placeholders
 
 Services (services.html)
 - Electrical Services
@@ -109,7 +109,7 @@ Contact Us (contact.html)
 |---|---|---|
 | Weeks 1 and 2 - Part 1 | Proposal approved, GitHub set up, content researched, file structure created | Complete |
 | Weeks 3 and 4 - Part 1 | All five HTML pages built, navigation working, content added | Complete |
-| Weeks 5 and 6 - Part 2 | External CSS stylesheet, responsive design, styling | Pending |
+| Weeks 5 and 6 - Part 2 | External CSS stylesheet, responsive design, styling | Complete |
 | Weeks 7 and 8 - Part 3 | JavaScript, form validation, SEO finalised | Pending |
 | Week 9 | Final testing, submission | Pending |
 
@@ -136,7 +136,48 @@ HTML elements used across all pages:
 
 ---
 
+## Part 2 Details
+
+CSS features implemented:
+
+- CSS reset to ensure consistent styling across all browsers
+- Base body styles including font family, font size, line height, and background colour
+- Typography styles for all six heading levels and paragraph text
+- Sticky header with yellow bottom border
+- Navigation with hover background and active yellow underline pseudo-classes
+- Hero section with background image and semi-opaque navy overlay
+- Service article cards with yellow left border and box shadow
+- Team member cards with portrait area, role label, and info section
+- Fieldset and legend styling for grouped form sections
+- Input, select, and textarea styling with focus pseudo-class border highlight
+- Submit button with hover state
+- Location cards with yellow top border and embedded iframe maps
+- Footer split into brand column and contact column with copyright bar
+- Media query at 768px for tablet layout adjustments
+- Media query at 480px for mobile layout adjustments
+- Responsive navigation that stacks on smaller screens
+- Responsive team grid that goes from four columns to two to one
+- Responsive hero overlay that fills full width on smaller screens
+
+---
+
 ## Changelog
+
+### Version 2.0.0 - 29 May 2026
+- Created external stylesheet style.css and linked to all five pages
+- Added CSS reset, base body styles, and typography for all heading levels
+- Styled header with sticky positioning, yellow bottom border, and logo sizing
+- Updated navigation with hover background and active page yellow underline
+- Added hero section with background image and semi-opaque overlay on index page
+- Styled service article cards with yellow left border and box shadow
+- Added team member cards with portrait area and role label on about page
+- Styled fieldsets, legends, labels, inputs, selects, and textarea on enquiry page
+- Added focus pseudo-class highlight to all form inputs
+- Styled submit button with yellow background and hover state
+- Added location card layout with Google Maps iframes on contact page
+- Updated footer with two column layout and copyright bar
+- Added responsive media queries for tablet at 768px and mobile at 480px
+- Removed duplicate CSS rules from stylesheet
 
 ### Version 1.0.0 - 27 April 2026
 - Created folder and file structure including css, js, and images folders
@@ -161,4 +202,12 @@ MDN Web Docs 2024. HTML: HyperText Markup Language. Available at: https://develo
 
 MDN Web Docs 2024. HTML forms. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms [Accessed 27 April 2026].
 
+MDN Web Docs 2024. CSS: Cascading Style Sheets. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS [Accessed 29 May 2026].
+
+MDN Web Docs 2024. Using media queries. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries [Accessed 29 May 2026].
+
 W3Schools 2024. HTML Tutorial. Available at: https://www.w3schools.com/html [Accessed 27 April 2026].
+
+W3Schools 2024. CSS Tutorial. Available at: https://www.w3schools.com/css [Accessed 29 May 2026].
+
+Google 2026. Gemini AI image generator. Images generated using Gemini for use as website assets including the company logo and hero background image. Available at: https://gemini.google.com [Accessed 29 May 2026].
