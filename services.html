@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="VoltEdge Solutions services - electrical, solar panel installation, solar geyser maintenance, pool pump repair, hot tub pump servicing, and water feature maintenance in Cape Town." />
-    <meta name="keywords" content="electrical services Cape Town, solar installation, pool pump repair, hot tub pump, water feature pump, solar geyser" />
+    <meta name="keywords" content="electrical services Cape Town, solar installation, pool pump repair, hot tub pump, water feature pump, solar geyser, COC certificate Cape Town" />
     <meta name="author" content="VoltEdge Solutions" />
     <title>Services | VoltEdge Solutions</title>
 
@@ -15,31 +15,22 @@
 
 <body>
 
-    <!-- =========================================
+    <!-- ==============================
          HEADER AND NAVIGATION
-    ================================================ -->
+    ============================== -->
     <header>
-        <img src="Images/VoltEdge_Logo.png" alt="VoltEdge Solutions Logo" width="150" height="auto" />
+        <!-- VoltEdge Solutions logo generated using Gemini AI (Google, 2026) -->
+        <img src="Images/VoltEdge_Logo.png" alt="VoltEdge Solutions company logo in navy blue and yellow" width="150" height="auto" />
         <p>Electrical | Solar | Pool and Pump Services</p>
 
         <!-- Navigation menu linking all pages of the website -->
         <nav>
-            <ul >
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-                <li>
-                    <a href="services.html">Services</a>
-                </li>
-                <li>
-                    <a href="enquiry.html">Get a Quote</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact Us</a>
-                </li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="enquiry.html">Get a Quote</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -57,160 +48,181 @@
                 businesses across Cape Town. All work is carried out by certified technicians and
                 meets the required South African standards.
             </p>
-        </section>
 
-        <!-- Electrical services section -->
-        <section>
-            <h2 style="text-align: left;">Electrical Services</h2>
-            <p>
+            <!-- Search bar for filtering services -->
+            <div class="search-bar">
+                <input
+                    type="text"
+                    id="service-search"
+                    placeholder="Search services e.g. solar, pool pump, COC..."
+                    aria-label="Search services"
+                />
+            </div>
 
-                Our general electrical services cover everything from small repairs to full commercial
-                installations. All work is done in line with SANS 10142 standards and our electricians
-                are registered with the Department of Labour.
+            <!-- Shown when search finds no matching services -->
+            <p id="no-results" style="display:none; color:#e53e3e; margin-top:1rem;">
+                No services found matching your search. Try a different keyword or
+                <a href="enquiry.html">contact us directly</a>.
             </p>
-
-            <article>
-                <h3>Residential Electrical</h3>
-                <p>We handle all home electrical needs including the following.</p>
-                <ul>
-                    <li>Geyser installations and replacements</li>
-                    <li>Plug point and light switch installations</li>
-                    <li>Prepaid electricity meter installations</li>
-                    <li>Inverter and UPS installations for load shedding</li>
-                    <li>Outdoor and security lighting</li>
-
-                </ul>
-            </article>
-
-            <article>
-                <h3>Commercial Electrical</h3>
-
-                <p>We work with small and medium businesses to keep their electrical systems safe and compliant.</p>
-                <ul>
-                    <li>Three-phase power installations</li>
-                    <li>Industrial machine wiring</li>
-                    <li>Emergency lighting systems</li>
-                    <li>Electrical compliance audits</li>
-                    <li>Scheduled maintenance plans</li>
-                </ul>
-            </article>
-
-            <article>
-                <h3>Certificates of Compliance</h3>
-
-                <p>
-                    A Certificate of Compliance is legally required when selling a property in South Africa.
-                    Our registered electricians carry out the full inspection and issue the COC documentation
-                    within 24 to 48 hours.
-                </p>
-            </article>
-
-            <article>
-                <h3>Distribution Board Upgrades</h3>
-
-                <p>
-                    Old or overloaded distribution boards are a safety risk. We replace and upgrade boards
-                    to handle modern electrical loads safely and correctly.
-                </p>
-            </article>
         </section>
 
-        <!-- Solar services section -->
-        <section>
-            <h2 style="text-align: right;">Solar and Renewable Energy</h2>
+        <!-- ── Electrical Services ── -->
+        <div class="accordion-section">
+            <button class="accordion-toggle" aria-expanded="false">
+                <span>Electrical Services</span>
+                <span class="accordion-icon">+</span>
+            </button>
 
-            <p>
-                With load shedding and rising electricity costs, solar energy is one of the best investments
-                a homeowner or business can make. Our certified solar specialists design and install systems
-                that match your energy needs and your budget.
-            </p>
-
-            <article>
-                <h3>Solar Panel Installation</h3>
-
-                <p>We supply and install grid-tied, off-grid, and hybrid solar systems.</p>
-                <ul>
-                    <li>On-site energy assessment and system sizing</li>
-                    <li>Supply and installation of solar panels and inverter</li>
-                    <li>Municipal grid application assistance where applicable</li>
-                    <li>System monitoring setup</li>
-                </ul>
-            </article>
-
-            <article>
-                <h3>Battery Storage and Hybrid Systems</h3>
-
+            <div class="accordion-body">
                 <p>
-                    Hybrid systems store excess solar energy in batteries so you can use it at night or during
-                    load shedding. We supply and install lithium-ion battery systems and hybrid inverters.
+                    Our general electrical services cover everything from small repairs to full commercial
+                    installations. All work is done in line with SANS 10142 standards and our electricians
+                    are registered with the Department of Labour.
                 </p>
-            </article>
 
-            <article>
-                <h3>Solar Geyser Installation and Maintenance</h3>
+                <article>
+                    <h3>Residential Electrical</h3>
+                    <p>We handle all home electrical needs including the following.</p>
+                    <ul>
+                        <li>Geyser installations and replacements</li>
+                        <li>Plug point and light switch installations</li>
+                        <li>Prepaid electricity meter installations</li>
+                        <li>Inverter and UPS installations for load shedding</li>
+                        <li>Outdoor and security lighting</li>
+                    </ul>
+                </article>
 
+                <article>
+                    <h3>Commercial Electrical</h3>
+                    <p>We work with small and medium businesses to keep their electrical systems safe and compliant.</p>
+                    <ul>
+                        <li>Three-phase power installations</li>
+                        <li>Industrial machine wiring</li>
+                        <li>Emergency lighting systems</li>
+                        <li>Electrical compliance audits</li>
+                        <li>Scheduled maintenance plans</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Certificates of Compliance</h3>
+                    <p>
+                        A Certificate of Compliance is legally required when selling a property in South Africa.
+                        Our registered electricians carry out the full inspection and issue the COC documentation
+                        within 24 to 48 hours.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Distribution Board Upgrades</h3>
+                    <p>
+                        Old or overloaded distribution boards are a safety risk. We replace and upgrade boards
+                        to handle modern electrical loads safely and correctly.
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <!-- ── Solar and Renewable Energy ── -->
+        <div class="accordion-section">
+            <button class="accordion-toggle" aria-expanded="false">
+                <span>Solar and Renewable Energy</span>
+                <span class="accordion-icon">+</span>
+            </button>
+
+            <div class="accordion-body">
                 <p>
-                    A solar geyser can reduce your water heating costs by up to 40 percent. We install and
-                    service both flat plate and evacuated tube solar geyser systems.
+                    With load shedding and rising electricity costs, solar energy is one of the best investments
+                    a homeowner or business can make. Our certified solar specialists design and install systems
+                    that match your energy needs and your budget.
                 </p>
-                <ul>
-                    <li>New solar geyser installations</li>
-                    <li>Retrofit onto existing geyser systems</li>
-                    <li>Annual service and pressure valve checks</li>
-                    <li>Fault diagnosis and element replacements</li>
-                </ul>
-            </article>
-        </section>
 
-        <!-- Pool and pump services section -->
-        <section>
-            <h2>Pool, Hot Tub, and Water Feature Pumps</h2>
+                <article>
+                    <h3>Solar Panel Installation</h3>
+                    <p>We supply and install grid-tied, off-grid, and hybrid solar systems.</p>
+                    <ul>
+                        <li>On-site energy assessment and system sizing</li>
+                        <li>Supply and installation of solar panels and inverter</li>
+                        <li>Municipal grid application assistance where applicable</li>
+                        <li>System monitoring setup</li>
+                    </ul>
+                </article>
 
-            <p>
-                VoltEdge Solutions is one of the few companies in Cape Town to specialise in aquatic pump
-                systems alongside electrical and solar work. Our technicians are trained to diagnose and
-                repair all major brands of pool, spa, and water feature pumps.
-            </p>
+                <article>
+                    <h3>Battery Storage and Hybrid Systems</h3>
+                    <p>
+                        Hybrid systems store excess solar energy in batteries so you can use it at night or during
+                        load shedding. We supply and install lithium-ion battery systems and hybrid inverters.
+                    </p>
+                </article>
 
-            <article>
-                <h3>Pool Pump Servicing and Repair</h3>
+                <article>
+                    <h3>Solar Geyser Installation and Maintenance</h3>
+                    <p>
+                        A solar geyser can reduce your water heating costs by up to 40 percent. We install and
+                        service both flat plate and evacuated tube solar geyser systems.
+                    </p>
+                    <ul>
+                        <li>New solar geyser installations</li>
+                        <li>Retrofit onto existing geyser systems</li>
+                        <li>Annual service and pressure valve checks</li>
+                        <li>Fault diagnosis and element replacements</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
 
-                <p>A faulty pool pump leads to poor filtration and costly chemical problems. We carry out full diagnostic checks and get most pumps repaired on the same day.</p>
-                <ul>
-                    <li>Motor winding testing and replacement</li>
-                    <li>Impeller and seal replacement</li>
-                    <li>Basket and filter inspection</li>
-                    <li>New pump supply and installation for all major brands</li>
-                    <li>Variable speed pump upgrades to save electricity</li>
-                </ul>
-            </article>
+        <!-- ── Pool, Hot Tub, and Water Feature Pumps ── -->
+        <div class="accordion-section">
+            <button class="accordion-toggle" aria-expanded="false">
+                <span>Pool, Hot Tub, and Water Feature Pumps</span>
+                <span class="accordion-icon">+</span>
+            </button>
 
-            <article>
-                <h3>Hot Tub and Spa Pump Repair</h3>
+            <div class="accordion-body">
+                <p>
+                    VoltEdge Solutions is one of the few companies in Cape Town to specialise in aquatic pump
+                    systems alongside electrical and solar work. Our technicians are trained to diagnose and
+                    repair all major brands of pool, spa, and water feature pumps.
+                </p>
 
-                <p>Spa and hot tub systems are complex and need specialist knowledge. Our technicians work with all major spa brands and can source replacement parts quickly.</p>
-                <ul>
-                    <li>Jet pump diagnosis and motor replacement</li>
-                    <li>Circulation pump servicing</li>
-                    <li>Wet end seal and gasket replacement</li>
-                    <li>Control board and wiring fault diagnosis</li>
-                    <li>Full spa electrical safety inspection</li>
-                </ul>
-            </article>
+                <article>
+                    <h3>Pool Pump Servicing and Repair</h3>
+                    <p>A faulty pool pump leads to poor filtration and costly chemical problems. We carry out full diagnostic checks and get most pumps repaired on the same day.</p>
+                    <ul>
+                        <li>Motor winding testing and replacement</li>
+                        <li>Impeller and seal replacement</li>
+                        <li>Basket and filter inspection</li>
+                        <li>New pump supply and installation for all major brands</li>
+                        <li>Variable speed pump upgrades to save electricity</li>
+                    </ul>
+                </article>
 
-            <article>
-                <h3>Water Feature and Fountain Pump Maintenance</h3>
+                <article>
+                    <h3>Hot Tub and Spa Pump Repair</h3>
+                    <p>Spa and hot tub systems are complex and need specialist knowledge. Our technicians work with all major spa brands and can source replacement parts quickly.</p>
+                    <ul>
+                        <li>Jet pump diagnosis and motor replacement</li>
+                        <li>Circulation pump servicing</li>
+                        <li>Wet end seal and gasket replacement</li>
+                        <li>Control board and wiring fault diagnosis</li>
+                        <li>Full spa electrical safety inspection</li>
+                    </ul>
+                </article>
 
-                <p>We service and repair submersible and external water feature pumps of all sizes.</p>
-                <ul>
-                    <li>Pump cleaning and descaling</li>
-                    <li>Submersible pump replacement</li>
-                    <li>Flow rate adjustment</li>
-                    <li>Electrical wiring inspection and repair</li>
-                    <li>Timer and float switch installations</li>
-                </ul>
-            </article>
-        </section>
+                <article>
+                    <h3>Water Feature and Fountain Pump Maintenance</h3>
+                    <p>We service and repair submersible and external water feature pumps of all sizes.</p>
+                    <ul>
+                        <li>Pump cleaning and descaling</li>
+                        <li>Submersible pump replacement</li>
+                        <li>Flow rate adjustment</li>
+                        <li>Electrical wiring inspection and repair</li>
+                        <li>Timer and float switch installations</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
 
         <!-- Link to enquiry page -->
         <section>
@@ -221,25 +233,28 @@
 
     </main>
 
-    <!-- ================================
+    <!-- ==============================
          FOOTER
-    ======================================== -->
-<footer>
-    <div class="footer-main">
-        <div class="footer-brand">
-            <strong>VoltEdge Solutions</strong>
-            <p>14 Circuit Road, Observatory, Cape Town, 7925</p>
-            <p>Monday to Friday: 07:00 - 17:00 | Saturday: 08:00 - 13:00</p>
+    ============================== -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <strong>VoltEdge Solutions</strong>
+                <p>14 Circuit Road, Observatory, Cape Town, 7925</p>
+                <p>Monday to Friday: 07:00 - 17:00 | Saturday: 08:00 - 13:00</p>
+            </div>
+            <div class="footer-contact">
+                <p>Phone: +27 21 555 0182</p>
+                <p>Email: info@voltedgesolutions.co.za</p>
+            </div>
         </div>
-        <div class="footer-contact">
-            <p>Phone: +27 21 555 0182</p>
-            <p>Email: info@voltedgesolutions.co.za</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoltEdge Solutions. All rights reserved.</p>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 VoltEdge Solutions. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
+
+    <!-- Services accordion and search script -->
+    <script src="js/services.js"></script>
 
 </body>
 </html>

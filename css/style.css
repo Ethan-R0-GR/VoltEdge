@@ -571,6 +571,89 @@ section ol li {
   margin-bottom: 0.3rem;
 }
 
+ 
+/* ============================================================
+   Services Page - services.html
+   Accordion sections and search bar styles.
+   ============================================================ */
+ 
+/* Search bar */
+.search-bar {
+    margin-top: 1.5rem;
+}
+ 
+.search-bar input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #e2e7ef;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #1a1a2e;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease;
+}
+ 
+.search-bar input:focus {
+    border-color: #1e3a5f;
+    outline: none;
+}
+ 
+/* Accordion section wrapper */
+.accordion-section {
+    border: 1px solid #e2e7ef;
+    border-left: 4px solid #f5c518;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 5px rgb(206, 206, 206);
+    overflow: hidden;
+}
+ 
+/* Toggle button acts as the section heading */
+.accordion-toggle {
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e3a5f;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+ 
+.accordion-toggle:hover {
+    background-color: #f8f9fb;
+}
+ 
+/* Plus and minus icon on the right */
+.accordion-icon {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #f5c518;
+    flex-shrink: 0;
+}
+ 
+/* Collapsible body - hidden by default */
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 1.5rem;
+}
+ 
+/* Padding added when open */
+.accordion-section.open .accordion-body {
+    padding: 0 1.5rem 1.5rem;
+}
+
+
 /* ============================================================
    Responsive Design - Tablet (max-width: 768px)
    ============================================================ */
