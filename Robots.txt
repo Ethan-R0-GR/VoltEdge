@@ -11,4 +11,4 @@ Disallow: /js/
 Disallow: /css/
 
 # Location of the sitemap
-Sitemap: https://voltedgesolutions.co.za/sitemap.xml
+Sitemap: https://ethan-r0-gr.github.io/VoltEdge/sitemap.xml
