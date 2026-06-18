@@ -535,7 +535,7 @@ section ol li {
 }
 
 .locations-grid div {
-   box-shadow: 10px 10px 5px rgb(206, 206, 206);
+  box-shadow: 10px 10px 5px rgb(206, 206, 206);
 }
 
 /* .locations-grid div:hover {
@@ -639,6 +639,39 @@ section ol li {
 }
 
 /* ============================================================
+   Form Validation Styles - enquiry.html and contact.html
+   ============================================================ */
+
+/* Red error message shown below invalid fields */
+.form-error {
+  display: block;
+  color: #e53e3e;
+  font-size: 0.82rem;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* Success message shown after the form is submitted */
+.form-success {
+  background-color: #f0fdf4;
+  border: 1px solid #86efac;
+  border-left: 4px solid #22c55e;
+  border-radius: 6px;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.form-success h3 {
+  color: #15803d;
+  margin-bottom: 0.75rem;
+}
+
+.form-success p {
+  color: #166534;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================================
    Responsive Design - Mobile (max-width: 480px)
    ============================================================ */
 
@@ -709,7 +742,13 @@ section ol li {
 }
 
 @keyframes pulse {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.02); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

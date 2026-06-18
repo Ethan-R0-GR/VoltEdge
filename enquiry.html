@@ -8,6 +8,7 @@
     <meta name="description" content="Request a free quote from VoltEdge Solutions. Fill in our enquiry form and one of our specialists will contact you within 24 hours." />
     <meta name="keywords" content="electrician quote Cape Town, solar quote, pool pump quote, free electrical quote" />
     <meta name="author" content="VoltEdge Solutions" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <title>Get a Quote | VoltEdge Solutions</title>
 
     <link rel="stylesheet" href="css/style.css" />
@@ -15,32 +16,30 @@
 
 <body>
 
-    <!-- ==============================================
+    <!-- ==============================
          HEADER AND NAVIGATION
-
-    ============================================ -->
+    ============================== -->
     <header>
         <img src="Images/VoltEdge_Logo.png" alt="VoltEdge Solutions Logo" width="150" height="auto" />
         <p>Electrical | Solar | Pool and Pump Services</p>
 
-        <!-- Navigation menu linking all pages of the website -->
         <nav>
-            <ul >
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="enquiry.html">Get a Quote</a></li>
+                <li><a href="enquiry.html" class="active">Get a Quote</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- ================================================
+    <!-- ==============================
          MAIN CONTENT
-    =================================================== -->
+    ============================== -->
     <main>
 
-        <!-- Title -->
+        <!-- Page title -->
         <section>
             <h2>Request a Free Quote</h2>
             <p>
@@ -49,14 +48,14 @@
             </p>
         </section>
 
-        <!-- form section -->
+        <!-- Enquiry form section -->
         <section>
             <h2 style="text-align: left;">Enquiry Form</h2>
 
-            <!-- Service enquiry form with client-side validation that we can add in Part 3 -->
-            <form action="#" method="post">
+            <!-- id added so JavaScript can find and validate this form -->
+            <form id="enquiry-form" action="#" method="post" novalidate>
 
-                <!--Personal details fieldset groups related inputs together -->
+                <!-- Personal details -->
                 <fieldset>
                     <legend>Your Details</legend>
 
@@ -86,11 +85,10 @@
 
                 <br />
 
-                <!-- Service details fieldset -->
+                <!-- Service details -->
                 <fieldset>
                     <legend>Service Required</legend>
 
-                    <!-- Dropdown to select which service category is needed -->
                     <label for="service-type">Service Category *</label>
                     <select id="service-type" name="service-type" required>
                         <option value="" disabled selected>Select a service category</option>
@@ -120,7 +118,6 @@
 
                     <br />
 
-                    <!-- Urgency level selection -->
                     <label for="urgency">How Urgent Is This?</label>
                     <select id="urgency" name="urgency">
                         <option value="" disabled selected>Select urgency level</option>
@@ -132,7 +129,6 @@
 
                     <br />
 
-                    <!-- Preferred contact time -->
                     <label for="preferred-time">Preferred Contact Time</label>
                     <select id="preferred-time" name="preferred-time">
                         <option value="" disabled selected>Select a preferred time</option>
@@ -145,11 +141,10 @@
 
                 <br />
 
-                <!-- Message fieldset -->
+                <!-- Message -->
                 <fieldset>
                     <legend>Additional Information</legend>
 
-                    <!-- Text area for describing the issue or project -->
                     <label for="message">Describe Your Issue or Project *</label>
                     <textarea
                         id="message"
@@ -162,7 +157,6 @@
 
                     <br />
 
-                    <!-- How thye heard about us -->
                     <label for="how-heard">How Did You Hear About Us?</label>
                     <select id="how-heard" name="how-heard">
                         <option value="" disabled selected>Select an option</option>
@@ -176,16 +170,15 @@
 
                 <br />
 
-                <!-- Submit, does nothing currently -->
                 <input type="submit" value="Submit Enquiry" />
 
             </form>
         </section>
 
-        <!-- What happens after submitting section -->
+        <!-- What happens next -->
         <section>
             <h2 style="text-align: right;">What Happens After You Submit?</h2>
-        
+
             <ol>
                 <li>Your enquiry is received and reviewed by our team within one business day</li>
                 <li>A specialist will call or email you to discuss your needs in more detail</li>
@@ -193,30 +186,33 @@
                 <li>Once approved we schedule and complete the job</li>
             </ol>
 
-            <p>For urgent electrical emergencies please call us directly on +27 21 555 0182.</p>
+            <p>For urgent electrical emergencies please call us directly on +27 XX XXX XXXX</p>
         </section>
 
     </main>
 
     <!-- ==============================
          FOOTER
-    ===================================== -->
-<footer>
-    <div class="footer-main">
-        <div class="footer-brand">
-            <strong>VoltEdge Solutions</strong>
-            <p>14 Circuit Road, Observatory, Cape Town, 7925</p>
-            <p>Monday to Friday: 07:00 - 17:00 | Saturday: 08:00 - 13:00</p>
+    ============================== -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <strong>VoltEdge Solutions</strong>
+                <p>14 Circuit Road, Observatory, Cape Town, 7925</p>
+                <p>Monday to Friday: 07:00 - 17:00 | Saturday: 08:00 - 13:00</p>
+            </div>
+            <div class="footer-contact">
+                <p>Phone: +27 21 555 0182</p>
+                <p>Email: info@voltedgesolutions.co.za</p>
+            </div>
         </div>
-        <div class="footer-contact">
-            <p>Phone: +27 21 555 0182</p>
-            <p>Email: info@voltedgesolutions.co.za</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoltEdge Solutions. All rights reserved.</p>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 VoltEdge Solutions. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
+
+    <!-- Enquiry form validation and email script -->
+    <script src="js/enquiry.js"></script>
 
 </body>
 </html>
