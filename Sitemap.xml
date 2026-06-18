@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sitemap.xml for VoltEdge Solutions -->
+<!-- Helps search engines understand the structure of the site -->
+<!-- Learn more: https://www.sitemaps.org -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://voltedgesolutions.co.za/index.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About Us page -->
+    <url>
+        <loc>https://voltedgesolutions.co.za/about.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Services page -->
+    <url>
+        <loc>https://voltedgesolutions.co.za/services.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Enquiry page -->
+    <url>
+        <loc>https://voltedgesolutions.co.za/enquiry.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Contact page -->
+    <url>
+        <loc>https://voltedgesolutions.co.za/contact.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>
