@@ -208,6 +208,10 @@ article {
   box-shadow: 10px 10px 5px rgb(206, 206, 206);
 }
 
+article:hover {
+  animation: pulse 3s ease infinite;
+}
+
 article h3 {
   margin-bottom: 0.4rem;
 }
@@ -346,6 +350,10 @@ footer {
   box-shadow: 10px 10px 5px rgb(206, 206, 206);
 }
 
+.team-card:hover {
+  animation: pulse 3s ease infinite;
+}
+
 .team-card .portrait {
   background-color: #1e3a5f;
   height: 220px;
@@ -389,6 +397,83 @@ footer {
   margin: 0;
 }
 
+/* Dark overlay covering the whole screen */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.88);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+ 
+/* Show the lightbox when active class is added by JavaScript */
+#lightbox.active {
+    display: flex;
+}
+ 
+/* Inner content box */
+#lightbox-content {
+    position: relative;
+    text-align: center;
+    max-width: 480px;
+    width: 90%;
+}
+ 
+/* The enlarged portrait image */
+#lightbox-img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 3px solid #f5c518;
+    display: block;
+    margin: 0 auto;
+}
+ 
+/* Name and role caption below the image */
+#lightbox-caption {
+    margin-top: 1rem;
+}
+ 
+#lightbox-name {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+ 
+#lightbox-role {
+    color: #f5c518;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0;
+}
+ 
+/* Close button in the top right corner */
+#lightbox-close {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+ 
+#lightbox-close:hover {
+    color: #f5c518;
+}
+
 /* ============================================================
    Enquiry Page - enquiry.html
    Styles for the form, fieldsets, inputs, and submit button.
@@ -402,6 +487,10 @@ fieldset {
   background-color: #ffffff;
   box-shadow: 10px 10px 5px rgb(206, 206, 206);
 }
+
+/* fieldset:hover {
+  animation: pulse 3s ease infinite;
+} */
 
 legend {
   font-weight: 700;
@@ -523,8 +612,12 @@ section ol li {
 }
 
 .locations-grid div {
-   box-shadow: 10px 10px 5px rgb(206, 206, 206);
+  box-shadow: 10px 10px 5px rgb(206, 206, 206);
 }
+
+/* .locations-grid div:hover {
+  animation: pulse 3s ease infinite;
+} */
 
 .location-card {
   background-color: #ffffff;
@@ -554,6 +647,89 @@ section ol li {
   color: #5a6478;
   margin-bottom: 0.3rem;
 }
+
+ 
+/* ============================================================
+   Services Page - services.html
+   Accordion sections and search bar styles.
+   ============================================================ */
+ 
+/* Search bar */
+.search-bar {
+    margin-top: 1.5rem;
+}
+ 
+.search-bar input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #e2e7ef;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #1a1a2e;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease;
+}
+ 
+.search-bar input:focus {
+    border-color: #1e3a5f;
+    outline: none;
+}
+ 
+/* Accordion section wrapper */
+.accordion-section {
+    border: 1px solid #e2e7ef;
+    border-left: 4px solid #f5c518;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 5px rgb(206, 206, 206);
+    overflow: hidden;
+}
+ 
+/* Toggle button acts as the section heading */
+.accordion-toggle {
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e3a5f;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+ 
+.accordion-toggle:hover {
+    background-color: #f8f9fb;
+}
+ 
+/* Plus and minus icon on the right */
+.accordion-icon {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #f5c518;
+    flex-shrink: 0;
+}
+ 
+/* Collapsible body - hidden by default */
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 1.5rem;
+}
+ 
+/* Padding added when open */
+.accordion-section.open .accordion-body {
+    padding: 0 1.5rem 1.5rem;
+}
+
 
 /* ============================================================
    Responsive Design - Tablet (max-width: 768px)
@@ -623,6 +799,39 @@ section ol li {
 }
 
 /* ============================================================
+   Form Validation Styles - enquiry.html and contact.html
+   ============================================================ */
+
+/* Red error message shown below invalid fields */
+.form-error {
+  display: block;
+  color: #e53e3e;
+  font-size: 0.82rem;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* Success message shown after the form is submitted */
+.form-success {
+  background-color: #f0fdf4;
+  border: 1px solid #86efac;
+  border-left: 4px solid #22c55e;
+  border-radius: 6px;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.form-success h3 {
+  color: #15803d;
+  margin-bottom: 0.75rem;
+}
+
+.form-success p {
+  color: #166534;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================================
    Responsive Design - Mobile (max-width: 480px)
    ============================================================ */
 
@@ -689,5 +898,17 @@ section ol li {
 
   footer {
     padding: 1rem;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
   }
 }

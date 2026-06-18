@@ -1,0 +1,14 @@
+# robots.txt for VoltEdge Solutions
+# Instructs search engine crawlers which pages to index
+# Learn more: https://www.robotstxt.org
+
+# Allow all search engine crawlers to access the site
+User-agent: *
+Allow: /
+
+# Block crawlers from indexing the js and css folders
+Disallow: /js/
+Disallow: /css/
+
+# Location of the sitemap
+Sitemap: https://voltedgesolutions.co.za/sitemap.xml
